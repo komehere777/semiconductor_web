@@ -4,6 +4,7 @@
 이 프로젝트는 웨이퍼 이미지에서 결함을 자동으로 검출하는 시스템을 구현합니다. Flask 백엔드와 React 프론트엔드를 사용하여 사용자 친화적인 웹 인터페이스를 제공합니다.
 
 ## 프로젝트 구조
+```
 SEMICD_V2/
 │
 ├── backend/
@@ -28,6 +29,7 @@ SEMICD_V2/
 ├── myenv/
 │
 └── README.md
+```
 
 ## 주요 기능
 1. 웨이퍼 이미지 업로드
@@ -71,7 +73,7 @@ SEMICD_V2/
    app = Flask(__name__)
    CORS(app)
 
-   model = YOLO('best.pt')
+   model = YOLO('best_v9_0.90.pt')
 
    @app.route('/detect', methods=['POST'])
    def detect():
@@ -111,7 +113,7 @@ SEMICD_V2/
    ```bash
    npx create-react-app client
    cd client
-   npm install react-bootstrap bootstrap axios
+   npm install react-bootstrap bootstrap axios react-icons
    ```
 2. package.json 수정
    - node_modules와 package-lock.json 삭제 후 npm install 실행
